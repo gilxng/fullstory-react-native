@@ -14,6 +14,7 @@ end
 
 target 'POCFullStoryReactNative' do
   config = use_native_modules!
+  pod 'FullStory', :http => 'https://ios-releases.fullstory.com/fullstory-1.33.0-xcframework.tar.gz'
 
   # Flags change depending on the env values.
   flags = get_default_flags()
@@ -40,12 +41,15 @@ target 'POCFullStoryReactNative' do
   end
 
   post_install do |installer|
-    react_native_post_install(
-      installer,
-      # Set `mac_catalyst_enabled` to `true` in order to apply patches
-      # necessary for Mac Catalyst builds
-      :mac_catalyst_enabled => false
-    )
-    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    react_native_post_install(installer)
+    # add this below
+    installer.aggregate_targets.each do |aggregate_target|
+      aggregate_target.user_project.native_targets.each do |target|
+        target.build_configurations.each do |config|
+          config.build_settings['LIBRARY_SEARCH_PATHS'] = ['$(SDKROOT)/usr/lib/swift', '$(inherited)']
+        end
+      end
+      aggregate_target.user_project.save
+    end
   end
 end
