@@ -10,6 +10,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fullstory/babel-plugin-annotate-react": "^2.2.2",
+    "@fullstory/babel-plugin-react-native": "^1.0.3",
+    "@fullstory/react-native": "^1.2.1",
     "react": "18.2.0",
     "react-native": "0.71.0"
   },

@@ -1,7 +1,16 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply plugin: "fullstory"
 
 import com.android.build.OutputFile
+
+fullstory {
+  org "o-1H82NX-na1"
+  enabledVariants "all"
+  recordOnStart true
+  // More Plugin Refference
+  // https://help.fullstory.com/hc/en-us/articles/360052419133#01GRMBN5AJX35AMF74DTQS904B
+}
 
 /**
  * This is the configuration block to customize your React Native Android app.

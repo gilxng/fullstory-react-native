@@ -266,7 +266,7 @@
     chalk "^2.4.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.13.16", "@babel/parser@^7.14.0", "@babel/parser@^7.14.7", "@babel/parser@^7.20.0", "@babel/parser@^7.20.7", "@babel/parser@^7.22.11", "@babel/parser@^7.22.5":
+"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.13.16", "@babel/parser@^7.14.0", "@babel/parser@^7.14.7", "@babel/parser@^7.20.0", "@babel/parser@^7.20.7", "@babel/parser@^7.22.11", "@babel/parser@^7.22.5":
   version "7.22.13"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.22.13.tgz#23fb17892b2be7afef94f573031c2f4b42839a2b"
   integrity sha512-3l6+4YOvc9wx7VlCSw4yQfcBo01ECA8TicQfbnCPuCEpRQrf+gTUyGdxNw+pyTUyywp6JRD1w0YQs9TpBXYlkw==
@@ -1174,6 +1174,27 @@
   version "8.48.0"
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.48.0.tgz#642633964e217905436033a2bd08bf322849b7fb"
   integrity sha512-ZSjtmelB7IJfWD2Fvb7+Z+ChTIKWq6kjda95fLcQKNS5aheVHn4IkfgRQE3sIIzTcSLwLcLZUD9UBt+V7+h+Pw==
+
+"@fullstory/babel-plugin-annotate-react@^2.2.0", "@fullstory/babel-plugin-annotate-react@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@fullstory/babel-plugin-annotate-react/-/babel-plugin-annotate-react-2.2.2.tgz#f110f564f89c10eb76578a38b4a93e82288db19a"
+  integrity sha512-JoRqy8KjPBWgYqOT+Uwnom76Ga43vjVh/pikE8OZKd5Magxp3j6VmmUCeWws/Ky2hiCWc2jc5kR6KjbapDDkLw==
+
+"@fullstory/babel-plugin-react-native@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@fullstory/babel-plugin-react-native/-/babel-plugin-react-native-1.0.3.tgz#fc5a7b462d204a68f63a56e801b097bfc3ad8ea8"
+  integrity sha512-XxHnkytUoZ60jSqoazKGRddJ8/E2vVM/YoVMqY0wrOulXadCPqjZmoAxVaWw2bFiM5dRiXzxCmjsx3tfGmonfw==
+  dependencies:
+    "@babel/parser" "^7.0.0"
+    "@babel/types" "^7.0.0"
+
+"@fullstory/react-native@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@fullstory/react-native/-/react-native-1.2.1.tgz#87bf84dbdfebefd2a4764443601ca4128733f0b1"
+  integrity sha512-fQ+CyawLbDkNFUEqjzDErhUDmQ/G4UFT6o/4WKT/YQ/iFqpXEv2KgwtvvpPaabHYQUy932JdlmUQwZ25P5BpOQ==
+  dependencies:
+    "@fullstory/babel-plugin-annotate-react" "^2.2.0"
+    "@fullstory/babel-plugin-react-native" "^1.0.3"
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
